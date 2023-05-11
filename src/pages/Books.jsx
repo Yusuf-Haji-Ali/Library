@@ -4,9 +4,9 @@ import Book from "../components/ui/book";
 const Books = ({ books: initialBooks }) => {
   const [books, setBooks] = useState(initialBooks);
 
-  function filterBooks(filterBy) {
-    console.log(filterBy);
-    if (filterBy === "LOW_TO_HIGH") {
+  function filterBooks(filter) {
+    console.log(filter);
+    if (filter === "LOW_TO_HIGH") {
       setBooks(
         books
           .slice()
@@ -17,7 +17,7 @@ const Books = ({ books: initialBooks }) => {
           )
       );
     }
-    if (filterBy === "HIGH_TO_LOW") {
+    if (filter === "HIGH_TO_LOW") {
       setBooks(
         books
           .slice()
@@ -28,13 +28,13 @@ const Books = ({ books: initialBooks }) => {
           )
       );
     }
-    if (filterBy === "RATING") {
+    if (filter === "RATING") {
       setBooks(books.slice().sort((a, b) => b.rating - a.rating));
     }
   }
 
   return (
-    <div className="books__vody">
+    <div className="books__body">
       <div className="books__main">
         <section className="books__container">
           <div className="row">

@@ -13,16 +13,16 @@ const Footer = () => {
             </figure>
           </Link>
           <div className="footer__list">
-            <Link to="" className="footer__link">
+            <Link to="/" className="footer__link">
               Home
             </Link>
-            <span href="" className="footer__link no-cursor">
+            <span href="/" className="footer__link no-cursor">
               About
             </span>
-            <Link to="" className="footer__link">
+            <Link to="/books" className="footer__link">
               Books
             </Link>
-            <Link to="" className="footer__link">
+            <Link to="/Cart" className="footer__link">
               Cart
             </Link>
           </div>

@@ -3,7 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LibraryLogo from "../assets/Library.svg";
 import { Link } from "react-router-dom";
 
-const Nav = () => {
+const Nav = ({ cart }) => {
+  const cartQuantity = 0;
+
   function openMenu() {
     document.body.classList += "menu--open";
   }
@@ -24,7 +26,7 @@ const Nav = () => {
             </Link>
           </li>
           <li className="nav__list">
-            <Link to="/books" className="nav__link">
+            <Link to="/books" className="nav__link nav__link--primary">
               Books
             </Link>
           </li>
@@ -35,7 +37,7 @@ const Nav = () => {
             <Link to="/cart" className="nav__link">
               <FontAwesomeIcon icon="shopping-cart" />
             </Link>
-            <span className="cart__length">3</span>
+            <span className="cart__length">{cartQuantity}</span>
           </li>
         </ul>
         <div className="menu__backdrop">
@@ -44,17 +46,22 @@ const Nav = () => {
           </button>
           <ul className="menu__links">
             <li className="menu__list">
-              <Link to="/" className="menu__link">
+              <Link to="/" className="menu__link" onClick={closeMenu}>
                 Home
               </Link>
             </li>
             <li className="menu__list">
-              <Link to="/books" className="menu__link">
+              <Link to="/books" className="menu__link" onClick={closeMenu}>
+                Books
+              </Link>
+            </li>
+            <li className="menu__list">
+              <Link to="/books" className="menu__link" onClick={closeMenu}>
                 About
               </Link>
             </li>
             <li className="menu__list">
-              <Link to="/cart" className="menu__link">
+              <Link to="/cart" className="menu__link" onClick={closeMenu}>
                 Cart
               </Link>
             </li>
