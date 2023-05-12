@@ -34,7 +34,7 @@ const Books = ({ books: initialBooks }) => {
   }
 
   return (
-    <div className="books__body">
+    <div id="books__body">
       <div className="books__main">
         <section className="books__container">
           <div className="row">

@@ -16,23 +16,27 @@ const Nav = ({ numberOfItems }) => {
   return (
     <nav>
       <div className="nav__container">
+        <button className="btn__menu click" onClick={openMenu}>
+          <FontAwesomeIcon icon="bars" />
+        </button>
+
         <Link to="/">
           <img src={LibraryLogo} alt="" className="logo" />
         </Link>
+
         <ul className="nav__links">
           <li className="nav__list">
             <Link to="/" className="nav__link">
               Home
             </Link>
           </li>
+
           <li className="nav__list">
-            <Link to="/books" className="nav__link nav__link--primary">
+            <Link to="/books" className="nav__link nav__link--primary click">
               Books
             </Link>
           </li>
-          <button className="btn__menu" onClick={openMenu}>
-            <FontAwesomeIcon icon="bars" />
-          </button>
+
           <li className="nav__icon">
             <Link to="/cart" className="nav__link">
               <FontAwesomeIcon icon="shopping-cart" />
@@ -42,6 +46,7 @@ const Nav = ({ numberOfItems }) => {
             )}
           </li>
         </ul>
+
         <div className="menu__backdrop">
           <button className="btn__menu btn__menu--close" onClick={closeMenu}>
             <FontAwesomeIcon icon="times"></FontAwesomeIcon>
