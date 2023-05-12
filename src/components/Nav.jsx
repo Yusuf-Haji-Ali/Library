@@ -26,7 +26,10 @@ const Nav = ({ numberOfItems }) => {
 
         <ul className="nav__links">
           <li className="nav__list">
-            <Link to="/" className="nav__link">
+            <Link
+              to="/"
+              className="nav__link link__hover--effect link__hover--effect-purple"
+            >
               Home
             </Link>
           </li>

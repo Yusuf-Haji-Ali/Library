@@ -79,7 +79,7 @@ const Cart = ({ cart, changeQuantity, removeFromCart }) => {
                   <div className="cart__empty">
                     <img
                       src={EmptyCart}
-                      alt="Empty Cart Image"
+                      alt="Empty Cart Template"
                       className="cart__empty--img"
                     />
                     <h2>You have no books in your cart :(</h2>
