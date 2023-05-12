@@ -2,6 +2,14 @@
 export const books = [
   {
     id: 1,
+    title: "The Auto Biography of Malcolm X",
+    url: "https://productimages.worldofbooks.com/0141032723.jpg",
+    originalPrice: 30,
+    salePrice: 12.95,
+    rating: 5,
+  },
+  {
+    id: 2,
     title: "Crack the Coding Interview",
     url: "https://covers.openlibrary.org/b/id/8091016-L.jpg",
     originalPrice: 49.95,
@@ -9,7 +17,7 @@ export const books = [
     rating: 4.5,
   },
   {
-    id: 2,
+    id: 3,
     title: "Atomic Habits",
     url: "https://covers.openlibrary.org/b/id/10958382-L.jpg",
     originalPrice: 39,
@@ -17,7 +25,7 @@ export const books = [
     rating: 5,
   },
   {
-    id: 3,
+    id: 4,
     title: "Can't Hurt Me",
     url: "https://covers.openlibrary.org/b/id/10425061-L.jpg",
     originalPrice: 29,
@@ -25,7 +33,7 @@ export const books = [
     rating: 5,
   },
   {
-    id: 4,
+    id: 5,
     title: "Deep Work",
     url: "https://covers.openlibrary.org/b/id/10088428-L.jpg",
     originalPrice: 44,
@@ -33,7 +41,7 @@ export const books = [
     rating: 4.5,
   },
   {
-    id: 5,
+    id: 6,
     title: "The 10X Rule",
     url: "https://covers.openlibrary.org/b/id/9978588-L.jpg",
     originalPrice: 32,
@@ -41,7 +49,7 @@ export const books = [
     rating: 5,
   },
   {
-    id: 6,
+    id: 7,
     title: "Sell Or Be Sold",
     url: "https://covers.openlibrary.org/b/id/7737110-L.jpg",
     originalPrice: 70,
@@ -49,7 +57,7 @@ export const books = [
     rating: 5,
   },
   {
-    id: 7,
+    id: 8,
     title: "Rich Dad Poor Dad",
     url: "https://covers.openlibrary.org/b/id/2380224-L.jpg",
     originalPrice: 11,
@@ -57,7 +65,7 @@ export const books = [
     rating: 4,
   },
   {
-    id: 8,
+    id: 9,
     title: "Cashflow Quadrant",
     url: "https://covers.openlibrary.org/b/id/1954899-L.jpg",
     originalPrice: 38,
@@ -65,7 +73,7 @@ export const books = [
     rating: 4.5,
   },
   {
-    id: 9,
+    id: 10,
     title: "48 Laws of Power Summary",
     url: "https://covers.openlibrary.org/b/id/8906626-L.jpg",
     originalPrice: 35,
@@ -73,7 +81,7 @@ export const books = [
     rating: 4.5,
   },
   {
-    id: 10,
+    id: 11,
     title: "The 5 Second Rule",
     url: "https://covers.openlibrary.org/b/id/8114155-L.jpg",
     originalPrice: 40,
@@ -81,19 +89,11 @@ export const books = [
     rating: 5,
   },
   {
-    id: 11,
+    id: 12,
     title: "How to Win Friends & Influence People",
     url: "https://covers.openlibrary.org/b/id/7895280-L.jpg",
     originalPrice: 30,
     salePrice: 20,
     rating: 5,
-  },
-  {
-    id: 12,
-    title: "Mastery",
-    url: "https://covers.openlibrary.org/b/id/8479576-L.jpg",
-    originalPrice: 30,
-    salePrice: 12.95,
-    rating: 4.5,
   },
 ];
