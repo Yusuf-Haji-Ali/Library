@@ -221,7 +221,7 @@ nav {
   width: 100vw;
   height: 100vh;
   z-index: 100;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   visibility: hidden;
@@ -851,6 +851,10 @@ select {
 @media (max-width: 550px) {
   .btn__menu {
     display: block;
+  }
+
+  .menu__backdrop {
+    display: flex;
   }
 
   .nav__list {
