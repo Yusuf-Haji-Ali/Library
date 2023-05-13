@@ -207,7 +207,7 @@ nav {
 
 .btn__menu {
   background-color: transparent;
-  font-size: 32px;
+  font-size: 26px;
   border: none;
   color: var(--purple);
   display: none;
@@ -859,6 +859,10 @@ select {
 
   .nav__list {
     display: none;
+  }
+
+  .logo {
+    width: 130px;
   }
 
   h1 {
