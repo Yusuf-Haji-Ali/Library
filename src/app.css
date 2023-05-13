@@ -383,7 +383,7 @@ HIGHLIGHTS
 }
 
 .highlight__img {
-  border: 2px solid var(--purple) 5d;
+  border: 2px solid var(--purple);
   color: var(--purple);
   width: 100px;
   height: 100px;
