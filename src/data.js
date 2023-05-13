@@ -2,7 +2,7 @@
 export const books = [
   {
     id: 1,
-    title: "The Auto Biography of Malcolm X",
+    title: "The Autobiography of Malcolm X",
     url: "https://productimages.worldofbooks.com/0141032723.jpg",
     originalPrice: 30,
     salePrice: 12.95,
