@@ -74,13 +74,13 @@ const Nav = ({ numberOfItems }) => {
               </Link>
             </li>
             <li className="menu__list">
-              <Link
-                to="/books"
-                className="menu__link link__hover--effect link__hover--effect-white"
+              <a
+                href="/"
+                className="menu__link link__hover--effect link__hover--effect-white no-cursor"
                 onClick={closeMenu}
               >
                 About
-              </Link>
+              </a>
             </li>
             <li className="menu__list">
               <Link
