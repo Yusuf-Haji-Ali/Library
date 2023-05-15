@@ -82,7 +82,9 @@ const Cart = ({ cart, changeQuantity, removeFromCart }) => {
                       alt="Empty Cart Template"
                       className="cart__empty--img"
                     />
-                    <h2>You have no books in your cart :(</h2>
+                    <h2 className="cart__empty--message">
+                      You have no books in your cart :(
+                    </h2>
                     <Link to="/books">
                       <button className="btn">Browse Books</button>
                     </Link>
