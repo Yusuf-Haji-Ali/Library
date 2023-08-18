@@ -1,44 +1,30 @@
 import React from "react";
-import Logo from "../assets/Library.svg";
+import FooterLogo from "../assets/Library.svg";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
   return (
     <footer>
       <div className="container">
-        <div className="row row__column">
+        <div className="row row-column">
           <Link to="/">
-            <figure className="footer__logo">
-              <img src={Logo} alt="" className="footer__logo--img" />
+            <figure className="footer-logo">
+              <img src={FooterLogo} alt="Footer Logo" className="footer-img" />
             </figure>
           </Link>
-          <div className="footer__list">
-            <Link
-              to="/"
-              className="footer__link link__hover--effect link__hover--effect-white"
-            >
-              Home
+          <div className="footer-list">
+            <Link to="/" className="footer-link">
+              <FontAwesomeIcon icon="house" className="click" />
             </Link>
-            <span
-              href="/"
-              className="footer__link link__hover--effect link__hover--effect-white no-cursor"
-            >
-              About
-            </span>
-            <Link
-              to="/books"
-              className="footer__link link__hover--effect link__hover--effect-white"
-            >
-              Books
+            <Link to="/books" className="footer-link">
+              <FontAwesomeIcon icon="book-open" className="click" />
             </Link>
-            <Link
-              to="/Cart"
-              className="footer__link link__hover--effect link__hover--effect-white"
-            >
-              Cart
+            <Link to="/Cart" className="footer-link">
+              <FontAwesomeIcon icon="shopping-cart" className="click" />
             </Link>
           </div>
-          <div className="footer__copyright">Copyright &copy; 2023 Library</div>
+          <div className="footer-copyright">Copyright &copy; Library</div>
         </div>
       </div>
     </footer>

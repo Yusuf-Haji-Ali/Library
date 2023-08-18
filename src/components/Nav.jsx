@@ -4,8 +4,6 @@ import LibraryLogo from "../assets/Library.svg";
 import { Link } from "react-router-dom";
 
 const Nav = ({ numberOfItems }) => {
-  const cartQuantity = 0;
-
   function openMenu() {
     document.body.classList += "menu--open";
   }
@@ -15,8 +13,8 @@ const Nav = ({ numberOfItems }) => {
   }
   return (
     <nav>
-      <div className="nav__container">
-        <button className="btn__menu click" onClick={openMenu}>
+      <div className="nav-container">
+        <button className="btn-menu click" onClick={openMenu}>
           <FontAwesomeIcon icon="bars" />
         </button>
 
@@ -24,68 +22,65 @@ const Nav = ({ numberOfItems }) => {
           <img src={LibraryLogo} alt="" className="logo" />
         </Link>
 
-        <ul className="nav__links">
-          <li className="nav__list">
+        <ul className="nav-links">
+          <li className="nav-list">
             <Link
               to="/"
-              className="nav__link link__hover--effect link__hover--effect-purple"
+              className="nav-link link-hover--effect link-hover--effect-purple"
             >
               Home
             </Link>
           </li>
 
-          <li className="nav__list">
-            <Link to="/books" className="nav__link nav__link--primary click">
+          <li className="nav-list">
+            <Link to="/books" className="nav-link nav-link--primary click">
               Books
             </Link>
           </li>
 
-          <li className="nav__icon">
-            <Link to="/cart" className="nav__link">
+          <li className="nav-icon">
+            <Link to="/registration" className="nav-link">
+              <FontAwesomeIcon icon={"user"} />
+            </Link>
+          </li>
+
+          <li className="nav-icon">
+            <Link to="/cart" className="nav-link">
               <FontAwesomeIcon icon="shopping-cart" />
             </Link>
             {numberOfItems > 0 && (
-              <span className="cart__length">{numberOfItems}</span>
+              <span className="cart-length">{numberOfItems}</span>
             )}
           </li>
         </ul>
 
-        <div className="menu__backdrop">
-          <button className="btn__menu btn__menu--close" onClick={closeMenu}>
+        <div className="menu-backdrop">
+          <button className="btn-menu btn-menu--close" onClick={closeMenu}>
             <FontAwesomeIcon icon="times"></FontAwesomeIcon>
           </button>
-          <ul className="menu__links">
-            <li className="menu__list">
+          <ul className="menu-links">
+            <li className="menu-list">
               <Link
                 to="/"
-                className="menu__link link__hover--effect link__hover--effect-white"
+                className="menu-link link-hover--effect link-hover--effect-white"
                 onClick={closeMenu}
               >
                 Home
               </Link>
             </li>
-            <li className="menu__list">
+            <li className="menu-list">
               <Link
                 to="/books"
-                className="menu__link link__hover--effect link__hover--effect-white"
+                className="menu-link link-hover--effect link-hover--effect-white"
                 onClick={closeMenu}
               >
                 Books
               </Link>
             </li>
-            <li className="menu__list">
-              <a
-                href="/"
-                className="menu__link link__hover--effect link__hover--effect-white no-cursor"
-                onClick={closeMenu}
-              >
-                About
-              </a>
-            </li>
-            <li className="menu__list">
+            <li className="menu-list">
               <Link
                 to="/cart"
-                className="menu__link link__hover--effect link__hover--effect-white"
+                className="menu-link link-hover--effect link-hover--effect-white"
                 onClick={closeMenu}
               >
                 Cart

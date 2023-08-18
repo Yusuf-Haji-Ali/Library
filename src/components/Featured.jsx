@@ -1,13 +1,12 @@
 import React from "react";
-import Book from "./ui/book";
-import { books } from "../data.js";
+import Book from "./book/book";
 
-const Featured = () => {
+const Featured = ({ books }) => {
   return (
     <section id="features">
       <div className="container">
         <div className="row">
-          <h2 className="section__title">
+          <h2 className="section-title">
             Featured <span className="purple">Books</span>
           </h2>
           <div className="books">

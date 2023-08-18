@@ -1,13 +1,12 @@
 import React from "react";
-import { books } from "../data";
-import Book from "./ui/book";
+import Book from "./book/book";
 
-const Discounted = () => {
+const Discounted = ({ books }) => {
   return (
-    <section id="recent">
+    <section id="discounted-books">
       <div className="container">
         <div className="row">
-          <div className="section__title">
+          <div className="content">
             <h2>
               Discounted <span className="purple">Books</span>
             </h2>

@@ -5,13 +5,13 @@ import Featured from "../components/Featured";
 import Discounted from "../components/Discounted";
 import Explore from "../components/Explore";
 
-const Home = () => {
+const Home = ({ books }) => {
   return (
     <>
       <Landing />
       <Highlights />
-      <Featured />
-      <Discounted />
+      <Featured books={books} />
+      <Discounted books={books} />
       <Explore />
     </>
   );
