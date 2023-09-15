@@ -15,7 +15,7 @@ const Books = ({ books: initialBooks }) => {
           <Filter books={books} setBooks={setBooks} />
         </div>
         <div className="books">
-          {initialBooks.map((book) => (
+          {books.map((book) => (
             <Book book={book} key={book.id} />
           ))}
         </div>

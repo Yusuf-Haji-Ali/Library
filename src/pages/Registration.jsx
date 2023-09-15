@@ -31,7 +31,7 @@ export const Registration = () => {
                       Sign up
                     </span>
                   </p>
-                  <button className="btn">Sign In</button>
+                  <button className="btn click">Sign In</button>
                 </div>
               </div>
             ) : (

@@ -644,6 +644,10 @@ select {
   margin: 8px 0 24px 0;
 }
 
+.recommended-title {
+  margin-top: 12px;
+}
+
 /* 
 
   REGISTRATION PAGE
@@ -869,6 +873,9 @@ MEDIA QUERIES
   .book-info--description {
     width: 100%;
   }
+  .registration-form {
+    width: 80%;
+  }
 }
 
 /* SMALL PHONES, LARGE SMARTPHONES */
@@ -903,6 +910,10 @@ MEDIA QUERIES
 
   .highlight:not(:last-child) {
     margin-bottom: 24px;
+  }
+
+  .registration-form {
+    width: 90%;
   }
 
   .cart-book {
