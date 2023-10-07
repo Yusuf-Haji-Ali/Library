@@ -1,7 +1,30 @@
 import React, { useState } from "react";
+import { auth, googleProvider } from "../firebase";
+import {
+  createUserWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
+import googleLogo from "../assets/googleLogo.png";
 
 export const Registration = () => {
   const [signIn, setSignIn] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const signUp = async () => {
+    await createUserWithEmailAndPassword(auth, email, password);
+  };
+
+  const signInWithGoogle = async () => {
+    await signInWithPopup(auth, googleProvider);
+  };
+
+  const logOut = async () => {
+    await signOut(auth);
+  };
+
   return (
     <div id="books-bg">
       <div className="container">
@@ -31,7 +54,15 @@ export const Registration = () => {
                       Sign up
                     </span>
                   </p>
-                  <button className="btn click">Sign In</button>
+                  <button className="btn click register">Sign In</button>
+                </div>
+
+                <div className="providers">
+                  <div className="provider click" onClick={signInWithGoogle}>
+                    <img src={googleLogo} alt="" className="providerLogo" />
+                  </div>
+                  <div className="provider click"></div>
+                  <div className="provider click"></div>
                 </div>
               </div>
             ) : (
@@ -42,12 +73,22 @@ export const Registration = () => {
 
                 <div className="input">
                   <label for="email">Email: </label>
-                  <input type="email" id="email" name="email" />
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
                 </div>
 
                 <div className="input">
                   <label for="password">Password: </label>
-                  <input type="password" id="password" name="password" />
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
                 </div>
 
                 <div className="input">
@@ -56,6 +97,7 @@ export const Registration = () => {
                     type="password"
                     id="confirm-password"
                     name="confirm-password"
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                   />
                 </div>
 
@@ -69,7 +111,9 @@ export const Registration = () => {
                       Sign in
                     </span>
                   </p>
-                  <button className="btn click">Sign Up</button>
+                  <button className="btn click register" onClick={signUp}>
+                    Sign Up
+                  </button>
                 </div>
               </div>
             )}

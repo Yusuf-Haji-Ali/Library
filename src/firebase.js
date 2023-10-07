@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { collection, getFirestore, getDocs } from "firebase/firestore";
-import { getAuth } from "firebase/auth";
+import { GoogleAuthProvider, getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCvf0_hqEgswQd_KkAU2xrb7xIW1Ub88Nw",
@@ -12,11 +12,12 @@ const firebaseConfig = {
 };
 
 // init firebase app
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
 // init services
 const db = getFirestore();
-const auth = getAuth();
+export const auth = getAuth(app);
+export const googleProvider = new GoogleAuthProvider(app);
 
 // collection ref
 const colRef = collection(db, "books");

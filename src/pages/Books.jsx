@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Book from "../components/book/book";
 import { Filter } from "../components/book/filter";
 
 const Books = ({ books: initialBooks }) => {
   const [books, setBooks] = useState(initialBooks);
+
+  useEffect(() => {
+    setBooks(initialBooks);
+  }, [initialBooks]);
 
   return (
     <div id="books-bg">
