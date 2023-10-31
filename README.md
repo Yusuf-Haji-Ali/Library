@@ -1,6 +1,6 @@
 # E-commerce Library App
 
-A clean, responsive, and user-friendly website that houses a library of books. Users can browse through books, view their information and sort by pricing and rating.![image](https://github.com/Yusuf-Haji-Ali/Library/assets/95085126/596a3faa-2d14-423a-accb-27d9af80184d)
+A clean, responsive, and user-friendly website that houses a library of books. Users can browse through books, view their information and sort by pricing and rating.
 
 
 ## Running the App
