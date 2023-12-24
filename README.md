@@ -1,4 +1,4 @@
-# E-commerce Library App
+# Library
 
 A clean, responsive, and user-friendly website that houses a library of books. Users can browse through books, view their information and sort by pricing and rating.
 
