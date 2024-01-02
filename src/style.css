@@ -584,6 +584,18 @@ select {
     
 */
 
+.book-info--loading {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-info--loading-icon {
+  font-size: 50px;
+  color: var(--purple);
+}
+
 .book-info {
   display: flex;
 }

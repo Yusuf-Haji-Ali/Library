@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 // Components
@@ -6,6 +5,8 @@ import Rating from "../components/book/rating";
 import Price from "../components/book/price";
 import { Recommended } from "../components/book/recommended";
 import { Summary } from "../components/book/summary";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 const BookInfo = ({ books, addToCart, cart }) => {
   const { id } = useParams();
@@ -14,6 +15,19 @@ const BookInfo = ({ books, addToCart, cart }) => {
   const isBookInCart = () => {
     return cart.find((book) => +book.id === +id);
   };
+
+  // Display a loading state while book data is being fetched
+  if (!book) {
+    return (
+      <div className="book-info--loading">
+        <FontAwesomeIcon
+          icon={faSpinner}
+          className="book-info--loading-icon"
+          spin
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="container-2">

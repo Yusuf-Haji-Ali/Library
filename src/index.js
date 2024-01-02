@@ -15,6 +15,7 @@ import {
   faTags,
   faHouse,
   faUser,
+  faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -28,7 +29,8 @@ library.add(
   faTags,
   faStar,
   faHouse,
-  faUser
+  faUser,
+  faSpinner
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
